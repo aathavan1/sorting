@@ -6,12 +6,14 @@ public class sorting{
 
 		Scanner s=new Scanner(System.in);
 		//sortt obj=new sortt();
+		long start=0,end=0;
 		array();
 		do{
 			
 			System.out.print("\n\n1.Selection sort\n\n2.Bubble sort\n\n3.insertion sort");
 			System.out.print("\n\nEnter your choice:");
 			choice=s.nextInt();
+			start=System.nanoTime();
 			switch(choice){
 				case 1:
 					selection_sort();
@@ -23,6 +25,10 @@ public class sorting{
 					insertion_sort();
 					break;
 			}
+			
+		end=System.nanoTime();
+		long execution_time=end-start;
+		System.out.println("\n Execution time for this sorting is = "+execution_time);
 		}while(choice<4);
 		System.out.print("\n\n\t\t!!!!!!!!!!Thanks for your contribution with us!!!!!!!!");
 	}
